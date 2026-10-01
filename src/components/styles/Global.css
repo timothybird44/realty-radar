@@ -1,0 +1,105 @@
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--rr-text);
+  background: var(--rr-bg);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--rr-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img, svg { display: block; max-width: 100%; }
+h1, h2, h3, h4 { margin: 0; line-height: 1.2; letter-spacing: -0.01em; color: var(--rr-navy); }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+
+.container { width: 100%; max-width: var(--rr-container); margin: 0 auto; padding: 0 20px; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid transparent;
+  font-weight: 600; font-size: .95rem; white-space: nowrap; transition: background .15s, border-color .15s, color .15s;
+}
+.btn:hover { text-decoration: none; }
+.btn--primary { background: var(--rr-blue); color: #fff; }
+.btn--primary:hover { background: var(--rr-blue-dark); }
+.btn--outline { background: #fff; color: var(--rr-text); border-color: var(--rr-border); }
+.btn--outline:hover { border-color: var(--rr-blue); color: var(--rr-blue); }
+.btn--ghost { background: transparent; color: var(--rr-blue); }
+.btn--sm { height: 36px; padding: 0 14px; font-size: .88rem; }
+.btn svg { width: 18px; height: 18px; }
+
+/* ---------- Header ---------- */
+.rr-header { position: sticky; top: 0; z-index: 40; background: #fff; border-bottom: 1px solid var(--rr-border); }
+.rr-header__inner { height: var(--rr-header-h); display: flex; align-items: center; gap: 28px; }
+.rr-logo { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 1.25rem; color: var(--rr-navy); letter-spacing: -0.02em; }
+.rr-logo:hover { text-decoration: none; }
+.rr-logo__text span { color: var(--rr-blue); }
+.rr-logo svg { width: 30px; height: 30px; }
+.rr-nav { display: flex; gap: 4px; flex: 1; }
+.rr-nav a { padding: 8px 12px; border-radius: 8px; color: var(--rr-text); font-weight: 500; font-size: .95rem; }
+.rr-nav a:hover { background: var(--rr-blue-50); text-decoration: none; }
+.rr-nav a.active { color: var(--rr-blue); background: var(--rr-blue-light); }
+.rr-header__actions { display: flex; gap: 8px; }
+.rr-menu-btn { display: none; background: none; border: 0; padding: 8px; color: var(--rr-navy); }
+.rr-menu-btn svg { width: 24px; height: 24px; }
+
+.rr-demo-banner { background: var(--rr-navy); color: #c7d7ff; font-size: .82rem; text-align: center; padding: 6px 16px; }
+.rr-demo-banner strong { color: #fff; }
+
+/* ---------- Footer ---------- */
+.rr-footer { background: var(--rr-navy); color: #b8c4e0; margin-top: 64px; padding: 48px 0 28px; font-size: .9rem; }
+.rr-footer__grid { display: grid; grid-template-columns: 1.6fr repeat(3, 1fr); gap: 32px; }
+.rr-footer h4 { color: #fff; font-size: .95rem; margin-bottom: 12px; }
+.rr-footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.rr-footer a { color: #b8c4e0; }
+.rr-footer a:hover { color: #fff; }
+.rr-footer .rr-logo { color: #fff; margin-bottom: 12px; }
+.rr-footer .rr-logo__text span { color: var(--rr-sky); }
+.rr-footer__bottom { border-top: 1px solid rgba(255,255,255,.1); margin-top: 36px; padding-top: 20px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; color: #8b99bd; font-size: .82rem; }
+
+/* ---------- Shared bits ---------- */
+.features-row { display: flex; gap: 16px; flex-wrap: wrap; color: var(--rr-text); font-size: .92rem; }
+.features-row span { display: inline-flex; align-items: center; gap: 6px; }
+.features-row svg { width: 20px; height: 20px; color: var(--rr-muted); }
+.dot-sep::before { content: "•"; margin: 0 8px; color: var(--rr-faint); }
+
+.pill { display: inline-flex; align-items: center; gap: 6px; font-size: .78rem; font-weight: 600; padding: 4px 10px; border-radius: 999px; white-space: nowrap; }
+.pill--good { background: var(--rr-good-bg); color: var(--rr-good); }
+.pill--warn { background: var(--rr-warn-bg); color: var(--rr-warn); }
+.pill--bad { background: var(--rr-bad-bg); color: var(--rr-bad); }
+.pill--blue { background: var(--rr-blue-light); color: var(--rr-blue-dark); }
+.pill--neutral { background: #eef1f6; color: var(--rr-muted); }
+
+.card { background: var(--rr-surface); border: 1px solid var(--rr-border); border-radius: var(--rr-radius); }
+.section-title { font-size: 1.5rem; font-weight: 800; margin-bottom: 6px; }
+.section-sub { color: var(--rr-muted); margin: 0 0 24px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.toast {
+  position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); z-index: 100;
+  background: var(--rr-navy); color: #fff; padding: 12px 20px; border-radius: 10px; box-shadow: var(--rr-shadow-lg); font-size: .92rem;
+}
+
+@media (max-width: 860px) {
+  .rr-nav, .rr-header__actions { display: none; }
+  .rr-menu-btn { display: block; margin-left: auto; }
+  .rr-header.is-open .rr-nav {
+    display: flex; flex-direction: column; position: absolute; top: var(--rr-header-h); left: 0; right: 0;
+    background: #fff; padding: 8px 16px 16px; border-bottom: 1px solid var(--rr-border); box-shadow: var(--rr-shadow);
+  }
+  .rr-footer__grid { grid-template-columns: 1fr 1fr; }
+  .container { padding: 0 16px; }
+}
+
+/* ---------- Segmented buttons (filters, estimator) ---------- */
+.seg { display: flex; border: 1.5px solid var(--rr-border); border-radius: 10px; overflow: hidden; }
+.seg button { flex: 1; height: 42px; border: 0; background: #fff; color: var(--rr-text); font-weight: 500; }
+.seg button + button { border-left: 1px solid var(--rr-border); }
+.seg button:hover { background: var(--rr-blue-50); }
+.seg button.active { background: var(--rr-blue); color: #fff; }
+
+.features-row__type { color: var(--rr-muted); padding-left: 12px; border-left: 1px solid var(--rr-border); }

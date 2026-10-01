@@ -1,0 +1,32 @@
+:root {
+  /* RealtyRadar blue theme */
+  --rr-navy: #0f2350;
+  --rr-navy-2: #16306b;
+  --rr-blue: #1a56db;
+  --rr-blue-dark: #1442b0;
+  --rr-blue-light: #e8f0ff;
+  --rr-blue-50: #f3f7ff;
+  --rr-sky: #38bdf8;
+  --rr-accent: #f59e0b;      /* asking price / subject markers */
+
+  --rr-text: #1d2433;
+  --rr-muted: #5b6477;
+  --rr-faint: #8a93a6;
+  --rr-border: #e1e6ef;
+  --rr-bg: #f6f8fc;
+  --rr-surface: #ffffff;
+
+  --rr-good: #0f9d58;
+  --rr-good-bg: #e6f6ee;
+  --rr-warn: #b45309;
+  --rr-warn-bg: #fff4e0;
+  --rr-bad: #c2410c;
+  --rr-bad-bg: #ffede5;
+
+  --rr-radius: 12px;
+  --rr-radius-sm: 8px;
+  --rr-shadow: 0 1px 2px rgba(16, 24, 40, .05), 0 4px 16px rgba(16, 24, 40, .06);
+  --rr-shadow-lg: 0 8px 30px rgba(16, 24, 40, .14);
+  --rr-container: 1200px;
+  --rr-header-h: 64px;
+}

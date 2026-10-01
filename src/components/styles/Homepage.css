@@ -1,0 +1,91 @@
+/* ---------- Hero ---------- */
+.home-hero {
+  position: relative; overflow: hidden; color: #fff; padding: 72px 0 96px;
+  background: radial-gradient(900px 480px at 85% -10%, rgba(56,189,248,.35), transparent 60%),
+              linear-gradient(160deg, #0c1c42, var(--rr-navy) 45%, #1a3f8f);
+}
+.home-hero__rings { position: absolute; right: -180px; top: 50%; width: 720px; height: 720px; transform: translateY(-50%); pointer-events: none; }
+.home-hero__rings span { position: absolute; inset: 0; border: 1px solid rgba(147, 197, 253, .18); border-radius: 50%; }
+.home-hero__rings span:nth-child(2) { inset: 120px; }
+.home-hero__rings span:nth-child(3) { inset: 240px; }
+.home-hero__rings i {
+  position: absolute; inset: 0; border-radius: 50%;
+  background: conic-gradient(from 0deg, rgba(56,189,248,.28), transparent 18%);
+  animation: sweep 6s linear infinite;
+}
+@keyframes sweep { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .home-hero__rings i { animation: none; } }
+
+.home-hero__inner { position: relative; max-width: 860px; }
+.home-hero h1 { color: #fff; font-size: clamp(2.1rem, 5vw, 3.3rem); font-weight: 800; letter-spacing: -0.03em; }
+.home-hero h1 span { color: #93c5fd; }
+.home-hero p { color: #c7d7ff; font-size: 1.1rem; margin: 16px 0 28px; max-width: 620px; }
+.home-hero__popular { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 18px; font-size: .88rem; color: #aebfe6; }
+.home-hero__popular a {
+  display: inline-flex; align-items: center; gap: 4px; padding: 5px 12px; border-radius: 999px;
+  background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); color: #fff;
+}
+.home-hero__popular a:hover { background: rgba(255,255,255,.16); text-decoration: none; }
+.home-hero__popular svg { width: 14px; height: 14px; }
+
+/* ---------- Value props ---------- */
+.home-props { position: relative; z-index: 2; margin-top: -44px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.home-prop { padding: 22px; box-shadow: var(--rr-shadow); }
+.home-prop__icon { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 10px; background: var(--rr-blue-light); color: var(--rr-blue); margin-bottom: 12px; }
+.home-prop__icon svg { width: 20px; height: 20px; }
+.home-prop h3 { font-size: 1.05rem; margin-bottom: 6px; }
+.home-prop p { margin: 0; color: var(--rr-muted); font-size: .92rem; }
+
+/* ---------- Sections ---------- */
+.home-section { margin-top: 64px; }
+.home-section__head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+.home-section__head .section-sub { margin-bottom: 0; }
+.home-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+
+/* ---------- Estimate showcase ---------- */
+.home-showcase { margin-top: 72px; background: linear-gradient(135deg, var(--rr-navy), #1a3f8f); color: #fff; padding: 64px 0; }
+.home-showcase__inner { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; }
+.home-showcase h2 { color: #fff; font-size: clamp(1.7rem, 3.2vw, 2.3rem); font-weight: 800; }
+.home-showcase p { color: #c7d7ff; }
+.eyebrow { display: flex; align-items: center; gap: 8px; font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #93c5fd !important; margin: 0 0 10px; }
+.eyebrow svg { width: 22px; height: 22px; }
+.home-showcase__actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
+.btn--outline-light { border-color: rgba(255,255,255,.4); color: #fff; }
+.btn--outline-light:hover { background: rgba(255,255,255,.08); border-color: #fff; }
+
+.home-showcase__card {
+  display: block; background: #fff; color: var(--rr-text); border-radius: 16px; padding: 22px; box-shadow: 0 30px 60px rgba(0,0,0,.3);
+}
+.home-showcase__card:hover { text-decoration: none; transform: translateY(-2px); transition: transform .2s; }
+.home-showcase__label { display: block; font-size: .8rem; color: var(--rr-muted); }
+.home-showcase__value { display: block; font-size: 2rem; font-weight: 800; color: var(--rr-navy); margin-top: 6px; }
+.home-showcase__range { display: block; font-size: .88rem; color: var(--rr-blue-dark); font-weight: 600; margin-bottom: 14px; }
+.home-showcase__card ul { list-style: none; margin: 0; padding: 0; }
+.home-showcase__card li { display: flex; justify-content: space-between; gap: 12px; padding: 9px 0; border-top: 1px solid var(--rr-border); font-size: .88rem; }
+.home-showcase__card li small { display: block; color: var(--rr-muted); font-size: .75rem; }
+.home-showcase__card li b { color: var(--rr-navy); }
+.home-showcase__more { display: block; margin-top: 10px; font-size: .85rem; font-weight: 600; color: var(--rr-blue); }
+
+/* ---------- Suburbs ---------- */
+.suburb-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.suburb-tile { display: grid; grid-template-columns: 1fr auto; padding: 16px 18px; color: var(--rr-text); transition: border-color .15s, box-shadow .15s; }
+.suburb-tile:hover { text-decoration: none; border-color: var(--rr-blue); box-shadow: var(--rr-shadow); }
+.suburb-tile strong { color: var(--rr-navy); }
+.suburb-tile__pc { grid-column: 1; font-size: .8rem; color: var(--rr-faint); }
+.suburb-tile__median { grid-column: 1; margin-top: 10px; font-size: 1.2rem; font-weight: 800; color: var(--rr-navy); }
+.suburb-tile__growth { grid-column: 2; grid-row: 3; align-self: end; display: inline-flex; align-items: center; gap: 4px; font-size: .85rem; font-weight: 700; color: var(--rr-good); }
+.suburb-tile__growth svg { width: 16px; height: 16px; }
+
+@media (max-width: 1000px) {
+  .home-grid, .suburb-grid { grid-template-columns: repeat(2, 1fr); }
+  .home-showcase__inner { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+  .home-hero { padding: 48px 0 80px; }
+  .home-props { grid-template-columns: 1fr; }
+  .home-hero__rings { display: none; }
+}
+@media (max-width: 520px) {
+  .home-grid { grid-template-columns: 1fr; }
+  .suburb-grid { grid-template-columns: 1fr 1fr; }
+}
